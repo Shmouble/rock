@@ -10,5 +10,11 @@ function touchRock(){
     if(userName){
         alert("Рад вас видеть, " + userName + ".");
         document.getElementById("rockImg").src = "img/rock-happy.png";
+        setTimeout("sadFace()", 300000);
     }
+}
+
+function sadFace(){
+    document.getElementById('rockImg').src = 'img/rock-lonely.png';
+    alert("Мне скучно!");
 }
