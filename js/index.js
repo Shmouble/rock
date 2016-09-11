@@ -18,3 +18,7 @@ function sadFace(){
     document.getElementById('rockImg').src = 'img/rock-lonely.png';
     alert("Мне скучно!");
 }
+
+function resizeRock(){
+    document.getElementById("rockImg").style.height = (document.body.clientHeight- 100)*0.75;
+}
