@@ -3,8 +3,9 @@
         <title>iRock - виртуальный камень-любимец</title>
         <link type="text/css" href="css/style.css" rel="stylesheet">
         <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/cookie.js" type="text/javascript"></script>
     </head>
-    <body onload="resizeRock(); sayHello()">
+    <body onload="resizeRock(); sayHello()" onresize="resizeRock()">
         <div>
             <img id="rockImg" src="img/rock.png" alt="iRock" onclick="touchRock()"/>
         </div>
