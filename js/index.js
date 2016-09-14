@@ -1,5 +1,7 @@
 function sayHello(){
-    userName = readCookie("irock_username");
+    if (navigator.cookieEnabled) {
+        userName = readCookie("irock_username");        
+    }
     if(userName){
         alert("Привет " + userName + ", я скучал.");
     } else {
@@ -16,7 +18,11 @@ function touchRock(){
         userName = prompt("Как вас зовут?", "Введите ваше имя.");
         if (userName){
             alert("Рад встрече, " + userName + "!");
-            writeCookie("irock_username", userName, 5*365);
+            if(navigator.cookieEnabled){
+                writeCookie("irock_username", userName, 5*365);
+            } else {
+                alert('Извините, у вас недоступны куки, я вас не запомню.');
+            }            
         }
     }
     document.getElementById("rockImg").src = "img/rock-happy.png";
